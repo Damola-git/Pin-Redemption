@@ -17,7 +17,10 @@ const feedbackContainer = document.getElementById("feedbackContainer");
                 const pins = data.pins; 
                 if (pins.includes(userInput.trim())) {
                     feedbackContainer.innerText = 'Pin is valid';
-                } else {
+                } else if (userInput=== ""){
+                    feedbackContainer.innerText = 'Input is empty'
+                }
+                else{
                     feedbackContainer.innerText = 'Pin is invalid';
                 }
             })
