@@ -14,7 +14,7 @@ const feedbackContainer = document.getElementById("feedbackContainer");
         fetch('pins.json')
             .then(response => response.json())
             .then(data => {
-                const pins = data.pins; // Assuming the JSON structure has a "pins" array
+                const pins = data.pins; 
                 if (pins.includes(userInput.trim())) {
                     feedbackContainer.innerText = 'Pin is valid';
                 } else {
